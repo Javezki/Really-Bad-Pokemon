@@ -23,7 +23,7 @@ public class MainMenu extends BadPokemonScreen {
 
     @Override
     public void show() {
-        title = new TextureRegion(new Texture(Gdx.files.internal("assets/Welcome.png")), 120, 100, 800, 600);
+        title = new TextureRegion(new Texture(Gdx.files.internal("assets/Welcome.png")), 0, 100, 800, 600);
         batch = new SpriteBatch();
         batch.getProjectionMatrix().setToOrtho2D(title.getRegionX(), title.getRegionY(), title.getRegionWidth(), title.getRegionHeight());
     }
