@@ -25,7 +25,8 @@ public class MainMenu extends BadPokemonScreen {
     public void show() {
         title = new TextureRegion(new Texture(Gdx.files.internal("assets/Welcome.png")), 0, 100, 800, 600);
         batch = new SpriteBatch();
-        batch.getProjectionMatrix().setToOrtho2D(title.getRegionX(), title.getRegionY(), title.getRegionWidth(), title.getRegionHeight());
+        batch.getProjectionMatrix().setToOrtho2D(title.getRegionX(), title.getRegionY(), title.getRegionWidth(),
+                title.getRegionHeight());
     }
 
     @Override
@@ -36,11 +37,10 @@ public class MainMenu extends BadPokemonScreen {
         batch.end();
 
         time += delta;
-        if (time > 1) {
+        if (time > 1)
             if (Gdx.input.isKeyPressed(Keys.ANY_KEY) || Gdx.input.justTouched()) {
                 System.out.println("hi");
             }
-        }
     }
 
 }
